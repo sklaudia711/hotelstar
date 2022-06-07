@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hotel STAR</title>
+    <link rel="stylesheet" type="text/css" href="Layout.css" />
+    <link rel="stylesheet" type="text/css" href="Menu.css" />
+    <style>
+        canvas
+        {
+            border: 1px dashed black;
+            background-color: white;
+        }
+        input
+        {
+            color: #F00;
+            background-color: bisque;
+        }
+        input.Selected
+        {
+            color: #00F;
+            background-color: antiquewhite;
+        }
+    </style>
+    <script type="text/javascript">
+        var can;
+        var cont;
+
+        window.onload = function ()
+        {
+            can = document.getElementById("plotno");
+        }
+
+        function wyczyscRysunek()
+        {
+            cont.clearRect(0, 0, can.width, can.height);
+        }
+
+        function rysujPromienie()
+        {
+            if (cont == null)
+            {
+                cont = can.getContext("2d");
+            }
+
+            cont.beginPath();
+            cont.lineWidth = 3;
+            cont.strokeStyle = "red";
+            cont.lineCap = "round";
+            cont.moveTo(300, 10);
+            cont.lineTo(320, 30);
+            cont.stroke();
+
+            cont.beginPath();
+            cont.lineWidth = 3;
+            cont.strokeStyle = "yellow";
+            cont.lineCap = "round";
+            cont.moveTo(250, 50);
+            cont.lineTo(300, 70);
+            cont.stroke();
+
+            cont.beginPath();
+            cont.lineWidth = 3;
+            cont.strokeStyle = "red";
+            cont.lineCap = "round";
+            cont.moveTo(230, 108);
+            cont.lineTo(290, 110);
+            cont.stroke();
+
+            cont.beginPath();
+            cont.lineWidth = 3;
+            cont.strokeStyle = "yellow";
+            cont.lineCap = "round";
+            cont.moveTo(250, 170);
+            cont.lineTo(300, 150);
+            cont.stroke();
+
+            cont.beginPath();
+            cont.lineWidth = 3;
+            cont.strokeStyle = "red";
+            cont.lineCap = "round";
+            cont.moveTo(310, 210);
+            cont.lineTo(330, 190);
+            cont.stroke();
+
+            cont.beginPath();
+            cont.lineWidth = 3;
+            cont.strokeStyle = "yellow";
+            cont.lineCap = "round";
+            cont.moveTo(380, 200);
+            cont.lineTo(380, 250);
+            cont.stroke();
+
+            cont.beginPath();
+            cont.lineWidth = 3;
+            cont.strokeStyle = "red";
+            cont.lineCap = "round";
+            cont.moveTo(450, 210);
+            cont.lineTo(430, 190);
+            cont.stroke();
+
+            cont.beginPath();
+            cont.lineWidth = 3;
+            cont.strokeStyle = "yellow";
+            cont.lineCap = "round";
+            cont.moveTo(380, 10);
+            cont.lineTo(380, 15);
+            cont.stroke();
+         
+        }
+
+        function rysujMorze()
+        {
+            if (cont == null)
+            {
+                cont = can.getContext("2d");
+            }
+
+            
+            var startPoint_X = 10;
+            var startPoint_Y = 200;
+            var controlPoint1_X = 187;
+            var controlPoint1_Y = 32;
+            var controlPoint2_X = 250;
+            var controlPoint2_Y = 420;
+            var endPoint_X = 450;
+            var endPoint_Y = 200;
+            cont.beginPath();
+            cont.lineWidth = 5;
+            cont.moveTo(startPoint_X, startPoint_Y);
+            cont.strokeStyle = "#5599CC";
+            cont.bezierCurveTo(controlPoint1_X, controlPoint1_Y, controlPoint2_X, controlPoint2_Y, endPoint_X, endPoint_Y);
+            cont.stroke();
+
+            var startPoint_X = 60;
+            var startPoint_Y = 250;
+            var controlPoint1_X = 130;
+            var controlPoint1_Y = 20;
+            var controlPoint2_X = 250;
+            var controlPoint2_Y = 250;
+            var endPoint_X = 450;
+            var endPoint_Y = 280;
+            cont.beginPath();
+            cont.lineWidth = 5;
+            cont.moveTo(startPoint_X, startPoint_Y);
+            cont.strokeStyle = "#5599CC";
+            cont.bezierCurveTo(controlPoint1_X, controlPoint1_Y, controlPoint2_X, controlPoint2_Y,  endPoint_X, endPoint_Y);
+            cont.stroke();
+
+            var startPoint_X = 50;
+            var startPoint_Y = 200;
+            var controlPoint1_X = 100;
+            var controlPoint1_Y = 350;
+            var controlPoint2_X = 360;
+            var controlPoint2_Y = -10;
+            var endPoint_X = 420;
+            var endPoint_Y = 250;
+            cont.beginPath();
+            cont.lineWidth = 5;
+            cont.moveTo(startPoint_X, startPoint_Y);
+            cont.strokeStyle = "#5599CC";
+            cont.bezierCurveTo(controlPoint1_X, controlPoint1_Y, controlPoint2_X, controlPoint2_Y, endPoint_X, endPoint_Y);
+            cont.stroke();
+
+            
+        }
+
+        function rysujSłonce()
+        {
+            if (cont == null)
+            {
+                cont = can.getContext("2d");
+            }
+
+      
+            cont.beginPath();
+            cont.globalAlpha = 0.5;
+            cont.arc(380, 100, 75, 0, 2 * Math.PI, true);
+            cont.strokeStyle = "red";
+            cont.stroke();
+            cont.fillStyle = "yellow";
+            cont.fill();
+            cont.globalAlpha = 1;
+        }
+
+
+       
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Hotel STAR</h1>
+    </header>
+    <nav>
+        <ol>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="Info.html">Oferta</a></li>
+            <li><a href="spa.html">Strefa SPA</a></li>
+            <li><a href="Tabelka.html">Cennik</a></li>
+            <li><a href="Form.html">Zarezerwuj</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="przelicznik.html">Jakiś przelicznik</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="map.html">Znacznik MAP</a></li>
+            <li><a href="Mapa.html">Mapa obiektu</a></li>
+            <li><a href="zrodla.html">Źródła</a></li>
+        </ol>
+    </nav>
+    <article>
+        <h2>Narysuj morze!</h2>
+        <form>
+            <input type="button" name="RysujBtn" value="Rysuj Morze" onclick="rysujMorze();" />
+            <input type="button" name="RysujBtn" value="Rysuj Słońce" onclick="rysujSłonce()" />
+            <input type="button" name="RysujBtn" value="Rysuj Promienie" onclick="rysujPromienie()" />
+            <input type="button" name="RysujBtn" value="Wyczyść Obszar Rysowania"
+                   onclick="wyczyscRysunek();" class="Selected" />
+            <br /><br />
+            <canvas id="plotno" width="500" height="300"></canvas>
+        </form>
+    </article>
+    <aside>
+        <iframe src="Kontrolki_JS.html"></iframe><br />
+        <iframe src="licznik.html"></iframe>
+    </aside>
+    <footer>
+        stopka całej strony<br />
+        Wszelkie prawa zastrzeżone.<br />Linki do kredytów znajdują się w ostatniej zakładce.
+    </footer>
+</body>
+</html>

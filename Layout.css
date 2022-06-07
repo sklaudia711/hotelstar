@@ -1,0 +1,175 @@
+﻿@font-face {
+    font-family: 'LibreBaskerville-Regular';
+    src: url('LibreBaskerville-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url('Roboto-Thin.ttf') format('truetype');
+}
+
+
+
+body {
+    color: #bcbfc1;
+    width: 1100px;
+    height: 700px;
+    margin: auto;
+    background-color: #1b2627;
+}
+
+h1 {
+    font-family: 'Roboto-Thin';
+    font-size: 100px;
+    font-weight: 100 !important;
+    text-align: center !important;
+    letter-spacing: 3px;
+    z-index: 0 !important;
+    background-color: rgb(27, 38, 39, 0.9);
+    color: #3a910f;
+    width: 1100px;
+    height: 150px;
+    margin-bottom: 554px;
+}
+
+
+header {
+    background-image: url(https://images.pexels.com/photos/1797170/pexels-photo-1797170.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 600px;
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-left: solid 5px #3a910f;
+}
+
+
+
+article {
+    display: block;
+    float: left;
+    border-left: solid 5px #3a910f;
+    background-color: #1b2627;
+}
+
+aside {
+    position: fixed;
+    left: 30px;
+    top: 0px;
+    padding: 10px;
+    color: #bcbfc1;
+   
+}
+
+
+
+nav {
+    width: 1300px;
+    position: fixed;
+    top: -10px;
+    right: -890px;
+}
+
+article {
+    overflow: auto;
+    text-align: justify;
+    width: 1060px;
+    height: 700px;
+    padding: 20px;
+    color: rgba(229,229,231, 0.8);
+    font-family: LibreBaskerville-Regular !important;
+    text-align: justify;
+}
+
+    article p {
+        font-family: LibreBaskerville-Regular !important;
+        font-size: 14px;
+        
+    }
+
+
+    article h2 {
+        font-family: 'Roboto-Regular' !important;
+        text-transform: uppercase;
+        font-weight: 100 !important;
+        text-align: right;
+        text-decoration: overline;
+    }
+
+    article h3 {
+        font-family: 'Roboto-Regular' !important;
+        text-transform: uppercase;
+        font-weight: 100 !important;
+    }
+
+
+
+#clock {
+    font-size: 10px;
+    text-align: center;
+    font-family: 'LibreBaskerville-Regular';
+}
+
+#myTimer {
+    font-size: 10px;
+    border: none;
+    text-align: center;
+    font-family: 'LibreBaskerville-Regular';
+}
+
+h2 {
+    font-family: 'Roboto-Regular';
+    text-transform: uppercase;
+    font-weight: 100 !important;
+    text-decoration: overline;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3a910f;
+    transition-duration: 2s !important;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #3a910f;
+        border-radius: 7px;
+        transition-duration: 2s !important;
+    }
+
+::-webkit-scrollbar-track {
+    background: #1b2627;
+    ;
+}
+
+
+body > footer {
+    width: 1100px;
+    height: 200px;
+    margin: 10px;
+    position: relative;
+    bottom: 0px;
+    height: 80px;
+    width: 1085px;
+    float: left;
+    margin-left: 0px;
+    border-top: 10px double #3a910f;
+    border-left: 5px solid #3a910f;
+    border-right: 5px solid #3a910f;
+    border-bottom: 5px solid #3a910f;
+    margin-top: 0px;
+    color: #bcbfc1;
+    font-family: 'LibreBaskerville-Regular';
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 5px;
+    text-align: center;
+}

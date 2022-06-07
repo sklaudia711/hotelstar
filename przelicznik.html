@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hotel STAR</title>
+    <link rel="stylesheet" type="text/css" href="Layout.css" />
+    <link rel="stylesheet" type="text/css" href="Menu.css" />
+    <style type="text/css">
+        #calculator
+        {
+            text-align: center;
+            margin: auto;
+            border: 2px solid black;
+            padding: 10px;
+            width: 467px;
+            background-color: lightgrey;
+        }
+        
+        #calculator .number
+        {
+            text-align: center;
+            border: none;
+            padding: 10px;
+            width: 85px;
+            background-color: white;
+        }
+        
+        #calculator #operator
+        {
+            text-align: center;
+            margin: 17px 5px 0px 5px;
+            padding: 8px;
+            width: 55px;
+            background-color: darkgrey;
+        }
+        
+        #calculator #operator:hover
+        {
+            background-color: grey;
+        }
+        
+        #calculator .result
+        {
+            margin: 1px 5px 2px 5px;
+            border: none;
+            padding: 10px;
+            width: 55px;
+            background-color: darkgrey;
+        }
+        
+        #calculator .result:hover
+        {
+            background-color: grey;
+        }            
+    </style>
+    <script>
+
+        function obliczenia() {
+            var cenapakietu, iosob, idni, cenasniadan;
+
+            canapakietu = parseFloat(document.getElementById("cenapakietu").value);
+            iosob = parseFloat(document.getElementById("iosob").value);
+            idni = parseFloat(document.getElementById("idni").value);
+            cenasniadan = parseFloat(document.getElementById("cenasniadan").value);
+
+            if (cenapakietu == 0) {
+                wyj = "Niestety, nie ma w naszej ofercie takich niespodzianek, jak darmowe wakacje :(";
+            }
+
+            else if (iosob == 0) {
+                wyj = "Można na wakacje jechać w 0 oób? :0";
+            }
+
+            else if (idni == 0) {
+                wyj = "Co to za wakacje, co trwają 0 dni";
+            }
+
+            else if (cenapakietu < 0) {
+                wyj = "Tak niskich cen pakietów też nie mamy"
+            }
+
+            else if (cenasniadan == 0) {
+                wyj = "To też byłoby za piękne";
+            }
+
+            else if (iosob < 0) {
+                wyj = "Można na wakacje jechać w jeszcze mniej niż 0 oób? :0";
+            }
+
+            else if (idni < 0) {
+                wyj = "Wakacje w mniej niż 0 dni???? :00";
+            }
+
+            else if (cenasniadan < 0) {
+                wyj = "To już w ogóle byłoby za piękne";
+            }
+
+           
+
+            else {
+                wyj = "Cena pakietu dla jednej osoby na jeden dzień: " + ((cenapakietu / (iosob * idni)) + idni * cenasniadan);
+            }
+
+            document.getElementById("koniec").value = wyj;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Hotel STAR</h1>
+    </header>
+    <nav>
+        <ol>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="Info.html">Oferta</a></li>
+            <li><a href="spa.html">Strefa SPA</a></li>
+            <li><a href="Tabelka.html">Cennik</a></li>
+            <li><a href="Form.html">Zarezerwuj</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="przelicznik.html">Jakiś przelicznik</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="map.html">Znacznik MAP</a></li>
+            <li><a href="Mapa.html">Mapa obiektu</a></li>
+            <li><a href="zrodla.html">Źródła</a></li>
+        </ol>
+    </nav>
+    <article>
+        <h2>Przelicznik cen</h2>
+        <p>Przelicz cenę pakietu na jedną osobę na jedną noc.</p>
+        <form>
+            Cena pakietu: <input type="text" id="cenapakietu" required /> <br />
+            Ilość osób: <input type="text" id="iosob" required /> <br />
+            Ilość dni:<input type="text" id="idni" required /> <br />
+            Cena śniadań: <input type="text" id="cenasniadan" required /> <br /><br />
+            <input type="button" value="Kalkuluj" onclick="obliczenia()" />
+            <br /><br /> <br /><br />
+            <input type="text" id="koniec" class="obl" />
+
+        </form>
+    </article>
+    <aside>
+        <iframe src="Kontrolki_JS.html">
+        </iframe><br />
+        <iframe src="licznik.html"></iframe>
+    </aside>
+    <footer>
+        stopka całej strony<br />
+        Wszelkie prawa zastrzeżone.<br />Linki do kredytów znajdują się w ostatniej zakładce.
+    </footer>
+</body>
+</html>

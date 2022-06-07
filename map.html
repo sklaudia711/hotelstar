@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hotel STAR</title>
+    <link rel="stylesheet" type="text/css" href="Layout.css" />
+    <link rel="stylesheet" type="text/css" href="Menu.css" />
+
+    <script>
+        obraz_1 = new Image();
+        obraz_1.src = "map.png";
+    </script>
+
+</head>
+<body onload="Start()">
+    <header>
+        <h1>Hotel STAR</h1>
+    </header>
+    <nav>
+        <ol>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="Info.html">Oferta</a></li>
+            <li><a href="spa.html">Strefa SPA</a></li>
+            <li><a href="Tabelka.html">Cennik</a></li>
+            <li><a href="Form.html">Zarezerwuj</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="przelicznik.html">Jakiś przelicznik</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="map.html">Znacznik MAP</a></li>
+            <li><a href="Mapa.html">Mapa obiektu</a></li>
+            <li><a href="zrodla.html">Źródła</a></li>
+        </ol>
+    </nav>
+    <article>
+        <h2>Znacznik MAP</h2>
+        <img src="map.png" alt="test" usemap="#mapa1" />
+        <map name="mapa1">
+            <area shape="rect" coords="4, 127, 242, 344" href="spa.html" alt="Spa" />
+            <area shape="rect" coords="299, 127, 535, 344" href="Info.html" alt="Oferta" />
+            <area shape="rect" coords="590, 127, 834, 344" href="Form.html" alt="Recepcja" />
+            <area shape="poly" coords="299, 127, 536, 127, 417, 21" href="https://prezentmarzen.com/skok-ze-spadochronem/?gclid=CjwKCAjwy_aUBhACEiwA2IHHQPdNNGcafP4QmNoxmSvYAGb8gtixWcuyKHq1SrjONgKFtFVhOuc6CRoC6GsQAvD_BwE" alt="tekst" />
+        </map>
+       
+    </article>
+    <aside>
+        <iframe src="Kontrolki_JS.html">
+        </iframe><br />
+        <iframe src="licznik.html"></iframe>
+    </aside>
+    <footer>
+        stopka całej strony<br />
+        Wszelkie prawa zastrzeżone.<br />Linki do kredytów znajdują się w ostatniej zakładce.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿@font-face {
+    font-family: 'LibreBaskerville-Regular';
+    src: url('LibreBaskerville-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url('Roboto-Thin.ttf') format('truetype');
+}
+
+* {
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+    -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+    -moz-transition-property: all;
+    -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+}
+
+
+nav ol li {
+    display: block;
+    list-style: none;
+}
+
+    nav ol li a {
+        text-decoration: none;
+        display: block;
+        overflow: hidden;
+        width: 20px;
+        height: 15px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        text-align: center;
+        margin: 5px;
+        background: #3a910f;
+        color: transparent;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-family: 'LibreBaskerville-Regular';
+    }
+
+        nav ol li a:hover {
+            width: 200px;
+            color: rgba(229,229,231, 0.8);
+        }

@@ -1,0 +1,20 @@
+﻿body {
+    margin: 0;
+    padding: 0
+}
+
+main {
+    padding: 0;
+    height: 500px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    position: fixed;
+    top: 100px;
+    left:37%;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    text-align: center;
+}

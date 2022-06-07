@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hotel STAR</title>
+    <link rel="stylesheet" type="text/css" href="Layout.css" />
+    <link rel="stylesheet" type="text/css" href="Menu.css" />
+</head>
+<body>
+    <header>
+        <h1>
+            Hotel STAR
+        </h1>
+    </header>
+    <nav>
+        <ol>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="Info.html">Oferta</a></li>
+            <li><a href="spa.html">Strefa SPA</a></li>
+            <li><a href="Tabelka.html">Cennik</a></li>
+            <li><a href="Form.html">Zarezerwuj</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="przelicznik.html">Jakiś przelicznik</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="Mapa.html">Mapa obiektu</a></li>
+            <li><a href="zrodla.html">Źródła</a></li>
+        </ol>
+    </nav>
+    <article>
+        <h2>Zarezerwuj nocleg</h2>
+        <form action="mailto: sandra.kwiatkowska@student.put.poznan.pl" method="post" enctype="text/plain">
+            <p>
+                <b>W celu rezerwacji noclegu prosimy o wypełnienie poniższego formularza. To takie proste ;)</b>
+                <br>
+            </p>
+            <fieldset>
+                <legend>Dane kontaktowe</legend>
+                <label for="imie">Imię<em>*</em></label>
+                <input id="imie" name="name" placeholder="Podaj imię" autofocus required />
+                <br />
+                <label for="">Nazwisko<em>*</em></label>
+                <input id="nazwisko" name="surname" placeholder="Podaj nazwisko" required />
+                <br />
+                <label for="telefon">Nr telefonu</label>
+                <input id="telefon" name="phone" placeholder="(+48)xxx-xxx-xxx" />
+                <br />
+                <label for="">E-mail<em>*</em></label>
+                <input id="mail" name="email" type="email" placeholder="xxxxx@xxx.xxx" required />
+                <br />
+            </fieldset>
+            <fieldset>
+                <legend>Długość pobytu</legend>
+                <p>Proszę zaznaczyć ile nocy planują Państwo u nas być. Rezerwacji dokonujemy od 5 nocy w górę.</p>
+                <p>
+                    <input type="range" id="rating" name="rate" min="5" max="14"><br />
+                    <label for="rating"> 5 &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; 14&nbsp;&nbsp; </label>
+                </p>
+                <label for="birth_date">Data przyjazdu</label>
+                <input type="date" id="przyjazd" name="birth_1" plecholder="dd.mm.rrrr"><br /><br />
+                <label for="birth_date">Data wyjazdu</label>
+                <input type="date" id="wyjazd" name="birth_1" plecholder="dd.mm.rrrr"><br />
+            </fieldset>
+            <fieldset>
+                <legend>Wybór oferty</legend>
+                <p>
+                    <label>Wybór pokoju/apartamentu</label><br />
+                    <label for="oferta_1"><input type="radio" id="oferta_1" name="oferta" value="pokoj_1">Pokój 1-osobowy</label><br />
+                    <label for="oferta_2"><input type="radio" id="oferta_2" name="oferta" value="pokoj_2">Pokój 2-osobowy</label><br />
+                    <label for="oferta_3"><input type="radio" id="oferta_3" name="oferta" value="pokoj_3">Pokój 3-osobowy</label><br />
+                    <label for="oferta_4"><input type="radio" id="oferta_4" name="oferta" value="pokoj_4">Pokój 4-osobowy</label><br />
+                    <label for="oferta_5"><input type="radio" id="oferta_5" name="oferta" value="apartamen_1">Apartament 6-osobowy</label><br />
+                    <label for="oferta_6"><input type="radio" id="oferta_6" name="oferta" value="apartament_2">Dwupiętrowy apartament 10-osobowy</label><br />
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Dane dodatkowe</legend>
+                <label for="region">Skąd do nas przyjeżdzacie?</label><br />
+                <select id="region">
+                    <option value="dolnoslaskie">dolnośląskie</option>
+                    <option value="kujawsko-pomorskie">kujawsko-pomorskie</option>
+                    <option value="lubelskie">lubelskie</option>
+                    <option value="lubuskie">lubuskie</option>
+                    <option value="lodzkie">łódzkie</option>
+                    <option value="malopolskie">małopolskie</option>
+                    <option value="mazowieckie">mazowieckie</option>
+                    <option value="opolskie">opolskie</option>
+                    <option value="podkarpackie">podkarpackie</option>
+                    <option value="podlaskie">podlaskie</option>
+                    <option value="pomorskie">pomorskie</option>
+                    <option value="slaskie">śląskie</option>
+                    <option value="swietokrzyskie">świętokrzyskie</option>
+                    <option value="warminsko-mazurskie">warmińsko-mazurskie</option>
+                    <option value="wielkopolskie">wielkopolskie</option>
+                    <option value="zachodniopomorskie">zachodniopomorskie</option>
+                </select> <br /><br />
+
+                <legend>Skąd dowiedzieliście się o naszym Dworku?</legend>
+                <select id="skad_info">
+                    <option value="znaj_rodzina">Od znajomych/rodziny</option>
+                    <option value="social_media">Z Social Mediów (Facebook, Instagram, Snapchat, TikTok)</option>
+                    <option value="tv">Z reklam w TV</option>
+                </select>
+            </fieldset>
+            <p>
+                <input type="submit" value="Zarezerwuj" />
+                <input type="reset" value="Usuń wprowadzone dane" />
+            </p>
+        </form>
+    </article>
+    <aside>
+        <iframe src="Kontrolki_JS.html">
+        </iframe><br />
+        <iframe src="licznik.html"></iframe>
+    </aside>
+    <footer>
+        stopka całej strony<br />
+        Wszelkie prawa zastrzeżone.<br />Linki do kredytów znajdują się w ostatniej zakładce.
+    </footer>
+</body>
+</html>
